@@ -45,7 +45,7 @@ const signIn = async (email, password) => {
 		throw error
     }
 
-	const match = await bcrypt.compare(password, user.password);
+const match = await bcrypt.compare(password, user.password);
 
 	if (!match) {
 		const error = new Error('WRONG_PASSWORD')
@@ -53,16 +53,32 @@ const signIn = async (email, password) => {
 		throw error
 	}
 
-	const accessToken = jwt.sign({ id: user.id }, process.env.KEY)
+	const accessToken = jwt.sign({ user_id : user.id }, process.env.KEY)
 
 	return accessToken
 
 }
+
+const getLikeList = async (userId) => {
+
+	return await userDao.getLikeList(userId);
+    
+}
+
+const deleteLike = async (userId, productId) => {
+
+	if (typeof productId == "string") productId = [...productId];
+
+	return await userDao.deleteLike(userId, productId);
+}
+
 
 
 
 module.exports = { 
     signUp,
     checkUser,
-    signIn
+    signIn,
+	getLikeList,
+	deleteLike
 }

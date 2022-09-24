@@ -42,8 +42,46 @@ const checkUser = async (email) => {
 	return user
 }
 
+const getLikeList = async (userId) => {
+    console.log(userId);
+	return await dataSource.query(`
+	  SELECT 
+		  products.id as productId, 
+		  products.name as productName, 
+		  products.price, 
+		  categories.name as categoryName 
+	  FROM 
+		  products 
+	  INNER JOIN likes ON
+		  likes.product_id = products.id  
+	  INNER JOIN categories ON
+		  categories.id = products.category_id 
+	  WHERE likes.user_id = ?`,
+		  [userId]
+	)
+  }
+
+  const deleteLike = async (userId, productId) => {
+
+	for(const el of productId ){
+
+		await dataSource.query(`
+		DELETE FROM 
+			likes
+		WHERE 
+			user_id= ? AND
+			product_id = ?`, 
+			[userId, el]
+		)
+	}
+
+	return;
+
+}
+
 module.exports = { 
 	createUser,
     checkUser,
-    getUserByEmail
+    getUserByEmail,
+	getLikeList, deleteLike
 }
