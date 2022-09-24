@@ -1,0 +1,41 @@
+id,name,price,category_id,thumbnail_image_url
+1,킷캣,1000,1,https://images.unsplash.com/photo-1604815891325-0f9c17688328?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+2,m&m,800,1,https://images.unsplash.com/photo-1626157149703-739e3f27ac0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=904&q=80
+3,abc,2500,1,https://sitem.ssgcdn.com/16/76/25/item/0000008257616_i1_1200.jpg
+4,가나,500,1,https://i.pinimg.com/564x/90/4b/6a/904b6a1fa4e641d03d1fec7650273ccd.jpg
+5,크런치,1500,1,https://i.pinimg.com/564x/f9/f8/5c/f9f85cbac40c6ece87d5d59aa5afdf01.jpg
+6,toblerone,3000,1,https://i.pinimg.com/564x/f7/77/bf/f777bf834a0f1bf71eb0af92708c7b88.jpg
+7,milka,2000,1,https://i.pinimg.com/564x/2d/df/c8/2ddfc8f9bb4ed88471a003156c300af7.jpg
+8,Ritter Sport,3800,1,https://i.pinimg.com/564x/3f/82/16/3f8216cfa854367a8a5cef8b4f1dc7fe.jpg
+9,하리보,2500,2,https://i.pinimg.com/564x/a5/99/19/a5991977c3f0628fc66d9d5e0c0bb146.jpg
+10,트롤리,2000,2,https://i.pinimg.com/564x/1b/55/17/1b5517337ea29342f17b8b64b4bc555c.jpg
+11,마이구미,1000,2,https://i.pinimg.com/564x/96/94/f9/9694f9950939cab415b44731693f4345.jpg
+12,왕꿈틀이,1200,2,https://i.pinimg.com/564x/61/64/f1/6164f1e8724e14675ba03b43043ded6d.jpg
+13,젤리데이,1500,2,https://images.unsplash.com/photo-1581798269145-7512508289b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80
+14,웰치스,1800,2,https://i.pinimg.com/564x/e3/34/e8/e334e8f7e5bd6dbbeef8a3847a6c40d7.jpg
+15,말랑카우,2000,2,https://i.pinimg.com/564x/bc/63/38/bc6338cc04d018022305fabab16bd01f.jpg
+16,구미베어,1300,2,https://images.unsplash.com/photo-1534118650230-cec0aa21f255?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=363&q=80
+17,코피코,1500,3,https://i.pinimg.com/736x/b1/fa/d1/b1fad126aed60f8a8fa30e718f70a41f.jpg
+18,담라,2000,3,https://cdn.011st.com/11dims/resize/600x600/quality/75/11src/product/2276384942/B.jpg?850000000
+19,페를레디솔레 포지타노,7900,3,https://shop2.daumcdn.net/thumb/R500x500/?fname=http%3A%2F%2Fshop2.daumcdn.net%2Fshophow%2Fp%2FZ17346348179.jpg%3Fut%3D20220506171633
+20,벨기안,4000,3,https://img.danawa.com/prod_img/500000/925/517/img/12517925_1.jpg?shrink=330:330&_v=20201022145442
+21,카스가이 시오아메,4300,3,https://image.homeplus.kr/td/86e0fd4a-e043-4b42-8f63-33f3bf1ce951
+22,오브세이,1300,3,https://images.unsplash.com/photo-1626283651073-e86d3fe24172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80
+23,츄파츕스,500,3,http://image.nongshim.com/brand/info/1559111085724.jpg
+24,리콜라,1300,3,http://image.auction.co.kr/itemimage/1c/10/12/1c1012a8a3.jpg
+25,아몬드 쿠키,2000,4,https://images.unsplash.com/photo-1590194360930-4866613967b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=834&q=80
+26,초코칩 쿠키,2200,4,https://images.unsplash.com/photo-1598977801327-b21fe652e851?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80
+27,검은깨 쿠키,2500,4,https://images.unsplash.com/photo-1635489115465-33a363805585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80
+28,녹차 쿠키,3300,4,https://images.unsplash.com/photo-1582793908541-782dc529fd7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80
+29,커피 랑그드샤,4000,4,https://images.unsplash.com/photo-1611082191524-1c049443f288?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80
+30,코코넛 쿠키,3000,4,https://images.unsplash.com/photo-1551844547-043f512dc4d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=430&q=80
+31,커피 아몬드,3400,4,https://images.unsplash.com/photo-1576717585968-8ea8166b89b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+32,헤이즐넛 쿠키,2800,4,https://images.unsplash.com/photo-1583516867196-ea9a73ecdc13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80
+33,딸기케이크,10000,5,https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80
+34,티라미슈,18000,5,https://images.unsplash.com/photo-1639744211487-b27e3551b07c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80
+35,생크림케이크,12000,5,https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=401&q=80
+36,초콜릿케이크,15000,5,https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=789&q=80
+37,레드벨벳,19000,5,https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=936&q=80
+38,뉴욕치즈케이크,21000,5,https://images.unsplash.com/photo-1542826438-bd32f43d626f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=992&q=80
+39,고구마케이크,22000,5,https://images.unsplash.com/photo-1502004960551-dc67f7c24cb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=835&q=80
+40,녹차케이크,20000,5,https://images.unsplash.com/photo-1492683513054-55277abccd99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
