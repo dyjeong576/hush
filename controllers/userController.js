@@ -51,7 +51,6 @@ const deleteLike = catchAsync(async (req, res) => {
 
 })
 
-
   module.exports = {
 	  signUp,
     checkUser,

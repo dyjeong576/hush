@@ -5,3 +5,4 @@ load data local infile "/home/dyjeong/hush/testData/carts.csv" into table carts 
 load data local infile "/home/dyjeong/hush/testData/reviews.csv" into table reviews fields terminated by "," IGNORE 1 ROWS (user_id,product_id,content);
 load data local infile "/home/dyjeong/hush/testData/likes.csv" into table likes fields terminated by "," IGNORE 1 ROWS (user_id,product_id);
 load data local infile "/home/dyjeong/hush/testData/product_images.csv" into table product_images fields terminated by "," IGNORE 1 ROWS (product_id,image_url);
+load data local infile "/home/dyjeong/hush/testData/carts.csv" into table carts fields terminated by "," IGNORE 1 ROWS (user_id, product_id,quantity,checkbox);

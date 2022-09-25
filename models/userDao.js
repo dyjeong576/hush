@@ -1,8 +1,8 @@
-const dataSource = require('./dataSource')
+const appDataSource = require('./dataSource')
 
 const createUser = async (email, hashedPassword, name, address) => {
 
-  return await dataSource.query(`
+  return await appDataSource.query(`
 	  INSERT INTO users (
         email, password, name, address
 		) VALUES (
@@ -17,7 +17,7 @@ const createUser = async (email, hashedPassword, name, address) => {
 
 const checkUser = async (email) => {
 
-    const [result] =  await dataSource.query(`
+    const [result] =  await appDataSource.query(`
 	SELECT EXISTS(
 		SELECT *
 		FROM users 
@@ -29,7 +29,7 @@ const checkUser = async (email) => {
   }
 
   const getUserByEmail = async (email) => {
-	const [user] = await dataSource.query(`
+	const [user] = await appDataSource.query(`
 		SELECT 
 			id,
 			name,
@@ -44,7 +44,7 @@ const checkUser = async (email) => {
 
 const getLikeList = async (userId) => {
     console.log(userId);
-	return await dataSource.query(`
+	return await appDataSource.query(`
 	  SELECT 
 		  products.id as productId, 
 		  products.name as productName, 
@@ -65,7 +65,7 @@ const getLikeList = async (userId) => {
 
 	for(const el of productId ){
 
-		await dataSource.query(`
+		await appDataSource.query(`
 		DELETE FROM 
 			likes
 		WHERE 
@@ -79,9 +79,11 @@ const getLikeList = async (userId) => {
 
 }
 
+
 module.exports = { 
 	createUser,
     checkUser,
     getUserByEmail,
-	getLikeList, deleteLike
+	getLikeList, 
+	deleteLike
 }

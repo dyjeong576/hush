@@ -72,9 +72,6 @@ const deleteLike = async (userId, productId) => {
 	return await userDao.deleteLike(userId, productId);
 }
 
-
-
-
 module.exports = { 
     signUp,
     checkUser,
