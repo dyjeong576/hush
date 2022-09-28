@@ -2,21 +2,37 @@ const appDataSource = require('./dataSource')
 
 const getProduct = async (productId) => {
     const [result] = await appDataSource.query(`
-      SELECT
-          p.id,
-          p.name,
-          p.price,
-          p.stock,
-          p.category_id,
-          p.thumbnail_image_url,
-          p.created_at,
-          p.updated_at,
-          c.name as category_name
-        FROM products p, categories c
-        WHERE p.id = ? and c.id = p.category_id`, [productId]
+    SELECT
+      p.id,
+      p.name,
+      p.price,
+      p.stock,
+      c.name as category_name,
+      p.thumbnail_image_url,
+      JSON_ARRAYAGG(i.image_url) AS image_url
+    FROM 
+      products p
+    JOIN 
+      categories c
+    ON  
+      c.id = p.category_id
+    JOIN
+      product_images i
+    ON
+      p.id = i.product_id
+    WHERE 
+      p.id = ?`, [productId]
     )
     
-    return result
+    if(typeof result.image_url == "string"){
+      result.image_url = result.image_url.replace("[",'');
+      result.image_url = result.image_url.replace("]",'');
+      result.image_url = result.image_url.replace(/"/g,'');
+      result.image_url = result.image_url.replace(/ /g,'');
+      result.image_url = result.image_url.split(",");
+    }
+  
+    return result;
   };
 
   const checkLike = async (userId, productId) => {
@@ -50,19 +66,21 @@ const inputLike = async (userId, productId) => {
     )
 }
 
-const getCategoryProducts = async (categoryId) => {
+const getCategoryProducts = async (category) => {
+
   const result = await appDataSource.query(`
     SELECT
-        id,
-        name,
-        price,
-        stock,
-        category_id,
-        thumbnail_image_url,
-        created_at,
-        updated_at
-      FROM products
-      WHERE category_id = ?`, [categoryId]
+        p.id,
+        p.name,
+        p.price,
+        p.stock,
+        c.id as category_id,
+        c.name as category_name,
+        thumbnail_image_url
+      FROM products p
+      INNER JOIN
+        categories c on c.id = p.category_id
+      WHERE c.name = ?`, [category]
   )
 
   return result
@@ -84,21 +102,25 @@ const addCart = async (product_id, quantity, userId) => {
 	return result.insertId
 }
 
-const getAllProducts = async () => {
+const getAllProducts = async (limit, offset) => {
+
   return await appDataSource.query(`
     SELECT
-        products.id,
-        products.name,
-        products.price,
-        products.stock,
-        products.thumbnail_image_url,
-        products.updated_at,
-        categories.name as category_name,
-        products.category_id,
-        products.created_at
-    FROM products,categories
-    where products.category_id = categories.id;
-      `)
+      products.id,
+      products.name,
+      products.price,
+      products.stock,
+      products.thumbnail_image_url,
+      categories.name as category_name,
+      products.category_id
+    FROM 
+      products,categories
+    WHERE 
+      products.category_id = categories.id
+    LIMIT ? offset ?
+      `, 
+      [+limit, +offset]
+  )
 };
 
 

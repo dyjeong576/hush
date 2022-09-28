@@ -23,9 +23,9 @@ const inputLike = catchAsync(async (req, res) => {
 
 const getCategoryProducts = catchAsync(async (req, res) => {
 
-    const categoryId = req.params.categoryId;
+    const {category, limit, offset} = req.query;
 
-    const products = await productService.getCategoryProducts(categoryId)
+    const products = await productService.getCategoryProducts(category, limit, offset)
 
     res.status(200).json({ message : products })
 })

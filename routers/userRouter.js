@@ -11,6 +11,8 @@ router.post('/signin', userController.signIn);
 
 router.get('/like', validToken, userController.getLikeList);
 router.delete('/like/deletelike', validToken, userController.deleteLike);
+router.get('/point', validToken, userController.getPoint);
+
 
 
 

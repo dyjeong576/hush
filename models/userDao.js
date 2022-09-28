@@ -19,13 +19,16 @@ const checkUser = async (email) => {
 
     const [result] =  await appDataSource.query(`
 	SELECT EXISTS(
-		SELECT *
-		FROM users 
-		WHERE email = ?) AS boolean;`,
+		SELECT 
+			email 
+		FROM 
+			users 
+		WHERE 
+			email = ?) AS boolean;`,
       [email]
     )
-	console.log(result.boolean)
-	return result;
+
+	return result.boolean;
   }
 
   const getUserByEmail = async (email) => {
@@ -79,11 +82,27 @@ const getLikeList = async (userId) => {
 
 }
 
+const getPoint = async (userId) => {
+
+	const [result] = await appDataSource.query(`
+		SELECT 
+			point
+		FROM 
+			users
+		WHERE users.id = ?`,
+			[userId]
+	)
+
+	return result;
+}
+  
+
 
 module.exports = { 
 	createUser,
     checkUser,
     getUserByEmail,
 	getLikeList, 
-	deleteLike
+	deleteLike,
+	getPoint
 }

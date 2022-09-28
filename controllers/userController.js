@@ -18,10 +18,11 @@ const signUp = catchAsync(async (req, res) => {
       
     const result = await userService.checkUser(email);
 
-    if (!result) return res.status(200).json({ message : "EXCESS_SUCCESS"});
+    if (+result) return res.status(400).json({ message : "KEY_ALREADY_EXISTS"});
 
-    res.status(200).json({ message : "KEY_ALREADY_EXISTS"});
+    res.status(200).json({ message : "EXCESS_SUCCESS"});
 
+    EXCESS_SUCCESS
   })
 
   const signIn = catchAsync(async (req, res) => {
@@ -51,10 +52,20 @@ const deleteLike = catchAsync(async (req, res) => {
 
 })
 
+const getPoint = catchAsync(async (req, res) => {
+  const userId = req.userId;
+    
+    const point = await userService.getPoint(userId);
+    
+    res.status(200).json({ message : point });
+
+})
+
   module.exports = {
 	  signUp,
     checkUser,
     signIn, 
     getLikeList,
-    deleteLike
+    deleteLike,
+    getPoint
 }

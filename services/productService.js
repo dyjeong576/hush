@@ -10,8 +10,11 @@ const inputLike = async (userId, productId) => {
 
 }
 
-const getCategoryProducts = async (categoryId) => {
-    return await productDao.getCategoryProducts(categoryId)
+const getCategoryProducts = async (category, limit, offset) => {
+
+    if (category == 'all') return await productDao.getAllProducts(limit, offset);
+    else return await productDao.getCategoryProducts(category);
+    
 }
 const getAllProducts = async () => {
 	return await productDao.getAllProducts()
