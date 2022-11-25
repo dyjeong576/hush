@@ -26,5 +26,3 @@
 6. ERD
 
 # <img width="1001" alt="image (1)" src="https://user-images.githubusercontent.com/107356126/193213444-1c8f5fea-d936-4669-b401-dcf04e777047.png">
-
-# 37-1st-HUSH-backend
